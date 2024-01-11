@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package basic;
+
+service BasicMessage {
+    rpc GetMsg(SendMsg) returns (ReturnMsg) {}
+}
+
+message SendMsg {
+    string msg = 1;
+}
+
+message ReturnMsg {
+    string msg =1;
+}
